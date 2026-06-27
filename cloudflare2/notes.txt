@@ -1,0 +1,26 @@
+# Task1
+- Setkan Elastic IP untuk public access
+- Cipta security group untuk kasi akses port HTTP & HTTPS
+- Install server di EC2 instance map dengan Elastic IP & security group
+- Install nginx web server & dnsutils di EC2 instance
+- Point A Record ke public IP EC2 (Tanpa Cloudflare Proxy)
+- Test Access web server menggunakan Public IP & url domain
+- Point A Record ke public IP EC2 (Cloudflare Proxy)
+- Test Access web server menggunakan Public IP & url domain
+ 
+# Task 2
+- Menggunakan fungsi SSL/TLS (HTTPS) di Cloudflare
+
+# Task3
+- Build EC2 instance guna script
+- Cipta Coludflare tunnel zero trust dan install connector
+- Copy-paste connector command die EC2 server untuk establish Cloudflare tunnel
+- Tambah custome domain di cloudflare tunnel
+- Test access URL domain 
+
+Kesimpulan
+- Belajar 4 cara untuk access web server (HTTP / HTTPS) dari Internet
+  1) Akses melalui public IP address 
+  2) Akses melalui domain URL (Tanpa Cloudflare proxy)
+  3) Akses melalui domain URL (Cloudflare proxy)
+  4) Akses melalui domain URL (Cloudflare Tunnel)
