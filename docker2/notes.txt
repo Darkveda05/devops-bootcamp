@@ -1,0 +1,4 @@
+IMAGE          ID             DISK USAGE   CONTENT SIZE   EXTRA
+nginx:alpine   54f2a904c251       93.3MB         26.9MB
+web:v1         b02a9fbfdeeb       1.98GB          498MB   U
+web:v2         1e01137003bc       93.6MB         26.2MB   U
