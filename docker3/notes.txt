@@ -1,0 +1,39 @@
+#   - alamat ECR image anda (dari nota Docker 2)
+
+❯ docker images
+                                                                                                                                                            i Info →   U  In Use
+IMAGE                                                                            ID             DISK USAGE   CONTENT SIZE   EXTRA
+569215999117.dkr.ecr.ap-southeast-1.amazonaws.com/devops-bootcamp/yusof:latest   6e9ef8996bac        104MB         31.2MB
+app:kecil                                                                        a67ac511fde1        104MB         31.2MB
+devops-bootcamp/yusof:latest                                                     6e9ef8996bac        104MB         31.2MB
+ghcr.io/infratify/arena-avatar:latest                                            4839ca66eedf        201MB         49.1MB    U
+ghcr.io/infratify/arena-server:latest                                            4a0ee704ecd2        195MB         48.7MB    U
+redis:latest                                                                     2838d5524559        208MB         56.3MB    U
+    ~ 
+
+
+
+#   - senarai network & volume anda
+
+root@ip-10-0-10-73:/home/ssm-user# docker ps -a
+CONTAINER ID   IMAGE                            COMMAND                  CREATED          STATUS          PORTS                                         NAMES
+1e69e477989a   ghcr.io/infratify/arena-avatar   "docker-entrypoint.s…"   8 minutes ago    Up 8 minutes    0.0.0.0:8081->8080/tcp, [::]:8081->8080/tcp   avatar
+14e1536af4ab   redis                            "docker-entrypoint.s…"   43 minutes ago   Up 43 minutes   6379/tcp                                      profile
+root@ip-10-0-10-73:/home/ssm-user#
+root@ip-10-0-10-73:/home/ssm-user# docker images
+                                                                                                                                                                               i Info →   U  In Use
+IMAGE                                   ID             DISK USAGE   CONTENT SIZE   EXTRA
+ghcr.io/infratify/arena-avatar:latest   4839ca66eedf        201MB         49.1MB    U
+redis:latest                            2838d5524559        208MB         56.3MB    U
+root@ip-10-0-10-73:/home/ssm-user#
+root@ip-10-0-10-73:/home/ssm-user# docker network ls
+NETWORK ID     NAME      DRIVER    SCOPE
+a61a79d3e36a   arena     bridge    local
+79b58d143e67   bridge    bridge    local
+c50b0f174f6a   host      host      local
+fbee369f9103   none      null      local
+root@ip-10-0-10-73:/home/ssm-user#
+root@ip-10-0-10-73:/home/ssm-user# docker volume ls
+DRIVER    VOLUME NAME
+local     me
+root@ip-10-0-10-73:/home/ssm-user#
