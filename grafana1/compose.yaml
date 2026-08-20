@@ -1,0 +1,19 @@
+services:
+  prometheus:
+    image:  prom/prometheus # nama image dari docker hub
+    ports: 
+     - "9090:9090"# port yang digunakan
+    volumes: 
+      - ./prometheus.yaml:/etc/prometheus/prometheus.yml # sasarkan
+    restart: unless-stopped
+
+  grafana:
+    image: grafana/grafana  # nama image dari docker hub
+    ports: 
+     - "3000:3000"# port yang digunakan
+    volumes: 
+     - grafana-data:/var/lib/grafana
+    restart: unless-stopped  
+
+volumes:
+  grafana-data:
